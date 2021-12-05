@@ -11,11 +11,11 @@ import { ServicesService } from './../services/services.service';
 export class CoursesComponent implements OnInit {
 
 
-  courses : Observable<Course[]>;
+  courses$ : Observable<Course[]>;
   displayedColumns = ['name', 'category']
   constructor( private coursesService : ServicesService) {
     //this.courses = []
-    this.courses = this.coursesService.list()
+    this.courses$ = this.coursesService.list()
 
   }
 
